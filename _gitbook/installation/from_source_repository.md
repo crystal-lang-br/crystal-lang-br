@@ -1,19 +1,19 @@
-# From sources
+# Do Código-fonte
 
-If you want to contribute then you might want to install Crystal from sources. But Crystal is written in Crystal itself! So you first need to use one of the previous described methods to have a running compiler.
+Se você quer colaborar com o projeto, entao você pode querer instalar o Crystal a partir do código-fonte. Mas o Crystal é escrito no próprio Crystal! Então primeiramente você precisa usar um dos métodos descritos anteriormente para ter um compilador rodando.
 
-You will also need LLVM 3.5 or 3.6 present in the path. If you are using Mac and the Homebrew formula, this will be automatically configured for you if you install Crystal adding `--with-llvm` flag.
+Você também precisará do LLVM 3.5 ou 3.6 no path. Se você está usando um Mac e a fórmula do Homebrew, isso é configurado automaticamente se você instalar o Crystal adicionando a flag `--with-llvm`.
 
-Then clone the repository:
+Então clone o repositório:
 
 ```
 git clone https://github.com/crystal-lang/crystal.git
 ```
 
-and you're ready to start hacking.
+e você está pronto para começar a programar.
 
-To build your own version of the compiler, run `make`. The new compiler will be placed at `.build/crystal`.
+Para fazer o build de sua própria versão do compilador, rode `make`. O novo compilador estará localizado em `.build/crystal`.
 
-Make sure to install [all the required libraries](https://github.com/crystal-lang/crystal/wiki/All-required-libraries). You might also want to read the [contributing guide](https://github.com/crystal-lang/crystal/blob/master/Contributing.md).
+Assegure-se de instalar [todas as bibliotecas necessárias](https://github.com/crystal-lang/crystal/wiki/All-required-libraries). Você também pode querer ler o [guia de colaboração](https://github.com/crystal-lang/crystal/blob/master/Contributing.md).
 
-Inside the repository you will also find a wrapper script at `bin/crystal`. This script will execute the global installed compiler or the one that you just compiled (if present).
+Dentro do repositório você também encontrará um script de wrapper em `bin/crystal`. Esse script executará o compilador instalado globalmente ou aquele que você acabou de compilar (se houver algum).

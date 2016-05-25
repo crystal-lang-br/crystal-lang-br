@@ -1,6 +1,6 @@
 # Nil
 
-The [Nil](http://crystal-lang.org/api/Nil.html) type has only one possible value:
+O tipo [Nil](http://crystal-lang.org/api/Nil.html) só tem um valor possível:
 
 ```crystal
 nil

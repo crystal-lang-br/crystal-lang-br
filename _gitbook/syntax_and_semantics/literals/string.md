@@ -1,95 +1,99 @@
 # String
 
-A [String](http://crystal-lang.org/api/String.html) represents an immutable sequence of UTF-8 characters.
+Uma [String](http://crystal-lang.org/api/String.html) representa uma sequência imutável de caracteres UTF-8.
 
-A String is typically created with a string literal, enclosing UTF-8 characters in double quotes:
+Uma String geralmente é criada com um literal de string, envolvendo-se caracteres UTF-8 em aspas duplas:
 
 ```crystal
-"hello world"
+"olá mundo"
 ```
 
-A backslash can be used to denote some characters inside the string:
+Uma contrabarra pode ser utilizada para denotar alguns caracteres dentro de uma string:
 
 ```crystal
-"\"" # double quote
-"\\" # backslash
+"\"" # aspas duplas
+"\\" # contrabarra
 "\e" # escape
 "\f" # form feed
-"\n" # newline
+"\n" # nova linha
 "\r" # carriage return
-"\t" # tab
-"\v" # vertical tab
+"\t" # tabulação
+"\v" # tabulação vertical
 ```
 
-You can use a backslash followed by at most three digits to denote a code point written in octal:
+Você pode usar uma contrabarra seguida por até três dígitos para denotar um ponto de código escrito em octal:
 
 ```crystal
 "\101" # == "A"
 "\123" # == "S"
 "\12"  # == "\n"
-"\1"   # string with one character with code point 1
+"\1"   # string com um caractere com o código de ponto 1
 ```
 
-You can use a backslash followed by an *u* and four hexadecimal characters to denote a unicode codepoint written:
+Você pode usar uma contrabarra seguida por um *u* e quatro caracteres hexadecimais para denotar um ponto de código unicode:
 
 ```crystal
 "\u0041" # == "A"
 ```
 
-Or you can use curly braces and specify up to six hexadecimal numbers (0 to 10FFFF):
+Ou você pode usar chaves e especiifcar até seis números hexadecimais (de 0 a 10FFFF):
 
 ```crystal
 "\u{41}"    # == "A"
 "\u{1F52E}" # == "🔮"
 ```
 
-A string can span multiple lines:
+Uma string pode envolver múltiplas linhas:
 
 ```crystal
 "hello
-      world" # same as "hello\n      world"
+      world" # é o mesmo que "hello\n      world"
 ```
 
-Note that in the above example trailing and leading spaces, as well as newlines,
-end up in the resulting string. To avoid this, you can split a string into multiple lines
-by joining multiple literals with a backslash:
+Perceba que no exemplo acima os espaços antes e depois das linhas, bem como as
+quebras de linha, aparecem na string resultante. Para evitar isso, você pode
+dividir uma string em múltiplas linhas juntando múltiplos literais com uma
+contrabarra:
 
 ```crystal
 "hello " \
 "world, " \
-"no newlines" # same as "hello world, no newlines"
+"no newlines" # é o mesmo que "hello world, no newlines"
 ```
 
-Alternatively, a backlash followed by a newline can be inserted inside the string literal:
+Alternativamente, uma contrabarra seguida por uma nova linha pode ser inserida
+dentro do literal de string:
 
 ```crystal
 "hello \
      world, \
-     no newlines" # same as "hello world, no newlines"
+     no newlines" # é o mesmo que "hello world, no newlines"
 ```
 
-In this case, leading whitespace is not included in the resulting string.
+Neste caso, o espaço em branco no começo e no final não é incluso na string
+resultante.
 
-If you need to write a string that has many double quotes, parenthesis, or similar
-characters, you can use alternative literals:
+
+Se você precisar escrever uma string que tem muitas aspas duplas, parênteses ou
+caracteres similares, você pode usar literais alternativos:
 
 ```crystal
-# Supports double quotes and nested parenthesis
+# Suporta aspas duplas e parênteses aninhados
 %(hello ("world")) # same as "hello (\"world\")"
 
-# Supports double quotes and nested brackets
+# Suporta aspas duplas e colchetes aninhados
 %[hello ["world"]] # same as "hello [\"world\"]"
 
-# Supports double quotes and nested curlies
+# Suporta aspas duplas e chaves aninhadas
 %{hello {"world"}} # same as "hello {\"world\"}"
 
-# Supports double quotes and nested angles
+# Suporta aspas duplas e sinais de maior que e menor que
 %<hello <"world">> # same as "hello <\"world\">"
 ```
 
 ## Heredoc
 
-You can also use a "heredoc" for creating string:
+Você também pode usar um "heredoc" para criar uma string:
 
 ```crystal
 <<-XML
@@ -99,32 +103,32 @@ You can also use a "heredoc" for creating string:
 XML
 ```
 
-A "heredoc" is written with `<<-IDENT`, where `IDENT` is an identifier, a sequence of letters and numbers that must start with a letter. The "heredoc" finishes in the line that starts with `IDENT`, ignoring leading whitespace.
+Um "heredoc" é escrito com `<<-IDENT`, onde `IDENT` é um identificador, uma sequência de letras e números que precisa começar com uma letra. O "heredoc" termina na linha que começa com `IDENT`, ignorando espaços em branco antes da palavra.
 
-Leading whitespace is removed from the heredoc contents according to the number of whitespace that this last `IDENT` has. For example:
+Os espaços em branco no começo da linha são removidos do conteúdo do heredoc de acordo com o número de espaços que este último `IDENT` tem. Por exemplo:
 
 ```crystal
-# Same as "Hello\n  world"
+# O mesmo que "Hello\n  world"
 <<-STRING
   Hello
     world
   STRING
 
-# Same as "  Hello\n    world"
+# O mesmo que "  Hello\n    world"
 <<-STRING
     Hello
       world
   STRING
 ```
 
-## Interpolation
+## Interpolação
 
-To create a String with embedded expressions, you can use string interpolation:
+Para cirar uma String com expressões embutidas, você pode usar a interpolação de strings:
 
 ```crystal
 a = 1
 b = 2
-"sum = #{a + b}"        # "sum = 3"
+"soma = #{a + b}"        # "soma = 3"
 ```
 
-This ends up invoking `Object#to_s(IO)` on each expression enclosed by `#{...}`.
+Isso chama `Object#to_s(IO)` em cada expressão envolvida por `#{...}`.

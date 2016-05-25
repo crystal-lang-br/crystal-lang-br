@@ -1,13 +1,13 @@
 # Integers
 
-There are four signed integer types: [Int8](http://crystal-lang.org/api/Int8.html), [Int16](http://crystal-lang.org/api/Int16.html), [Int32](http://crystal-lang.org/api/Int32.html) and [Int64](http://crystal-lang.org/api/Int64.html), being able to represent numbers of 8, 16, 32 and 64 bits respectively.
+Existem quatro tipos de inteiros com sinal: [Int8](http://crystal-lang.org/api/Int8.html), [Int16](http://crystal-lang.org/api/Int16.html), [Int32](http://crystal-lang.org/api/Int32.html) e [Int64](http://crystal-lang.org/api/Int64.html), que permitem representar números de 8, 16, 32 e 64 bits, respectivamente.
 
-There are four unsigned integer types: [UInt8](http://crystal-lang.org/api/UInt8.html), [UInt16](http://crystal-lang.org/api/UInt16.html), [UInt32](http://crystal-lang.org/api/UInt32.html) and [UInt64](http://crystal-lang.org/api/UInt64.html).
+Existem quatro tipos de inteiros sem sinal: [UInt8](http://crystal-lang.org/api/UInt8.html), [UInt16](http://crystal-lang.org/api/UInt16.html), [UInt32](http://crystal-lang.org/api/UInt32.html) e [UInt64](http://crystal-lang.org/api/UInt64.html).
 
-An integer literal is an optional `+` or `-` sign, followed by
-a sequence of digits and underscores, optionally followed by a suffix.
-If no suffix is present, the literal's type is the lowest between `Int32`, `Int64` and `UInt64`
-in which the number fits:
+Um literal de inteiro é um sinal de `+` ou `-` opcional, seguido por uma
+sequêcia de dígitos e underscores, opcionalmente seguidos por um sufixo. Se
+nenhum sufixo estiver presente, o tipo do literal será o menor em que o número
+couber dentr `Int32`, `Int64` e `UInt64`:
 
 ```crystal
 1      # Int32
@@ -29,27 +29,27 @@ in which the number fits:
 9223372036854775808 # UInt64
 ```
 
-The underscore `_` before the suffix is optional.
+O underscore `_` antes do sufixo é opcional.
 
-Underscores can be used to make some numbers more readable:
+Underscores podem ser usados para tornar alguns números mais legíveis:
 
 ```crystal
-1_000_000 # better than 1000000
+1_000_000 # é melhor do que 1000000
 ```
 
-Binary numbers start with `0b`:
+Números binários começam com `0b`:
 
 ```crystal
 0b1101 # == 13
 ```
 
-Octal numbers start with a `0o`:
+Números octais começam com um `0o`:
 
 ```crystal
 0o123 # == 83
 ```
 
-Hexadecimal numbers start with `0x`:
+Números hexadecimais começam com `0x`:
 
 ```crystal
 0xFE012D # == 16646445

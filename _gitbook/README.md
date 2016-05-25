@@ -1,11 +1,11 @@
-# Crystal Programming Language
+# Linguagem de Programação Crystal
 
-This is the documentation for the Crystal programming language.
+Esta é a documentação da linguagem de programação Crystal.
 
-Crystal is a programming language with the following goals:
+Crystal é uma linguagem de programação que tem os seguintes objetivos:
 
-* Have a syntax similar to Ruby (but compatibility with it is not a goal)
-* Statically type-checked but without having to specify the type of variables or method arguments.
-* Be able to call C code by writing bindings to it in Crystal.
-* Have compile-time evaluation and generation of code, to avoid boilerplate code.
-* Compile to efficient native code.
+* Ter uma sintaxe semelhante à de Ruby (mas nosso objetivo não é compatibilidade)
+* Checagem de tipos estática, mas sem ter que especificar o tipo das variáveis ou dos argumentos dos métodos.
+* Poder chamar código em C através de _bindings_ escritos em Crystal.
+* Ter avaliação e geração de código em tempo de compilação, para evitar código de _boilerplate_.
+* Compilar em código nativo eficiente.

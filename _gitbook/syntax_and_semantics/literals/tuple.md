@@ -1,6 +1,6 @@
 # Tuple
 
-A [Tuple](http://crystal-lang.org/api/Tuple.html) is typically created with a tuple literal:
+Um [Tuple](http://crystal-lang.org/api/Tuple.html) geralmente é criado com um literal de tuplas:
 
 ```crystal
 tuple = {1, "hello", 'x'} # Tuple(Int32, String, Char)
@@ -9,18 +9,18 @@ tuple[1]                  #=> "hello" (String)
 tuple[2]                  #=> 'x'     (Char)
 ```
 
-To create an empty tuple use [Tuple.new](http://crystal-lang.org/api/Tuple.html#new%28%2Aargs%29-class-method).
+Para criar uma tupla vazia, use [Tuple.new](http://crystal-lang.org/api/Tuple.html#new%28%2Aargs%29-class-method).
 
-To denote a tuple type you can write:
+Para denotar o tipo tupla você pode escrever:
 
 ```crystal
-# The type denoting a tuple of Int32, String and Char
+# Onde o tipo denota uma tupla de Int32, String e Char
 Tuple(Int32, String, Char)
 ```
 
-In type restrictions, generic type arguments and other places where a type is expected, you can use a shorter syntax, as explained in the [type](type_grammar.html):
+Nas restrições de tipos, argumentos de tipo genérico e outros lugares onde espera-se um tipo, você pode usar uma sintaxe mais curta, conforme explicado no capítulo sobre [tipos](../type_grammar.md):
 
 ```crystal
-# An array of tuples of Int32, String and Char
+# Um array de tuplas de Int32, String e Char
 Array({Int32, String, Char})
 ```

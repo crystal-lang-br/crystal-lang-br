@@ -1,67 +1,67 @@
-# Assignment
+# Atribuição
 
-Assignment is done with the equal (`=`) character.
+A atribuição é feita com o caractere de igual (`=`).
 
 ```crystal
-# Assigns to a local variable
+# Atribui a uma variável local
 local = 1
 
-# Assigns to an instance variable
+# Atribui a uma variável de instância
 @instance = 2
 
-# Assigns to a class variable
+# Atribui a uma variável de classe
 @@class = 3
 
-# Assigns to a global variable
+# Atribui a uma variável global
 $global = 4
 ```
 
-Each of the above kinds of variables will be explained later on.
+Cada um dos tipos de variáveis acima serão explicados adiante.
 
-Some syntax sugar that contains the `=` character is available:
+Está disponível um pouco de açúcar sintático com o caractere `=`:
 
 ```crystal
-local += 1  # same as: local = local + 1
+local += 1  # é o mesmo que: local = local + 1
 
-# The above is valid with these operators:
+# A sintaxe acima também funciona com estes operadores:
 # +, -, *, /, %, |, &, ^, **, <<, >>
 
-local ||= 1 # same as: local || (local = 1)
-local &&= 1 # same as: local && (local = 1)
+local ||= 1 # é o mesmo que: local || (local = 1)
+local &&= 1 # é o mesmo que: local && (local = 1)
 ```
 
-A method invocation that ends with `=` has syntax sugar:
+A invocação de um método que termina com `=` também tem açúcar sintatico:
 
 ```crystal
-# A setter
+# Um setter
 person.name=("John")
 
-# The above can be written as:
+# A linha acima pode ser escrita como:
 person.name = "John"
 
-# An indexed assignment
+# Uma atribuição de um índice
 objects.[]=(2, 3)
 
-# The above can be written as:
+# A linha acima pode ser escrita como:
 objects[2] = 3
 
-# Not assignment-related, but also syntax sugar:
+# Não está relacionado a atribuição, mas também é tem açúcar sintático:
 objects.[](2, 3)
 
-# The above can be written as:
+# A linha acima pode ser escrita como:
 objects[2, 3]
 ```
 
-The `=` operator syntax sugar is also available to setters and indexers. Note that `||` and `&&` use the `[]?` method to check for key prescence.
+O açúcar sintático do operador `=` também está disponível para setters e indexadores. Perceba que `||` e `&&` usam o método `[]?` para checar a presença da chave.
 
 ```crystal
-person.age += 1        # same as: person.age = person.age + 1
+person.age += 1        # é o mesmo que: person.age = person.age + 1
 
-person.name ||= "John" # same as: person.name || (person.name = "John")
-person.name &&= "John" # same as: person.name && (person.name = "John")
+person.name ||= "John" # é o mesmo que: person.name || (person.name = "John")
+person.name &&= "John" # é o mesmo que: person.name && (person.name = "John")
 
-objects[1] += 2        # same as: objects[1] = objects[1] + 2
+objects[1] += 2        # é o mesmo que: objects[1] = objects[1] + 2
 
-objects[1] ||= 2       # same as: objects[1]? || (objects[1] = 2)
-objects[1] &&= 2       # same as: objects[1]? && (objects[1] = 2)
+objects[1] ||= 2       # é o mesmo que: objects[1]? || (objects[1] = 2)
+objects[1] &&= 2       # é o mesmo que: objects[1]? && (objects[1] = 2)
 ```

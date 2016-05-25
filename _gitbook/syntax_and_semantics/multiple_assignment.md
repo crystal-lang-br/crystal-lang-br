@@ -1,18 +1,18 @@
-# Multiple assignment
+# Atribuição Múltipla
 
-You can declare/assign multiple variables at the same time by separating expressions with a comma (`,`):
+Você pode declarar/atribuir múltiplas variáveis ao mesmo tempo, separando as expressões com uma vírgula (`,`):
 
 ```crystal
 name, age = "Crystal", 1
 
-# The above is the same as this:
+# A linha acima é o mesmo que isso:
 temp1 = "Crystal"
 temp2 = 1
 name  = temp1
 age   = temp2
 ```
 
-Note that because expressions are assigned to temporary variables it is possible to exchange variables’ contents in a single line:
+Perceba que uma vez que as expressões são atribuídas a variáveis temporárias, é possível trocar os conteúdos de variáveis em uma única linha:
 
 ```crystal
 a = 1
@@ -22,45 +22,45 @@ a #=> 2
 b #=> 1
 ```
 
-If the right-hand side contains just one expression, it is considered an indexed type and the following syntax sugar applies:
+Se o lado da direita contém somente uma expressão, ela é considerada como um tipo indexado e o seguinte açúcar sintático se aplica:
 
 ```crystal
 name, age, source = "Crystal,1,github".split(",")
 
-# The above is the same as this:
+# A linha acima é o mesmo que isso:
 temp = "Crystal,1,github".split(",")
 name   = temp[0]
 age    = temp[1]
 source = temp[2]
 ```
 
-If the left-hand side contains just one variable, the right-hand side is considered an array:
+Se o lado da esquerda contém uma única variável, o lado da direita é considerado como um array:
 
 ```crystal
 names = "John", "Peter", "Jack"
 
-# The above is the same as:
+# A linha acima é o mesmo que isso:
 names = ["John", "Peter", "Jack"]
 ```
 
-Multiple assignment is also available to methods that end with `=`:
+A atribuição múltipla também está disponível para métodos que terminam com `=`:
 
 ```crystal
 person.name, person.age = "John", 32
 
-# Same as:
+# É o mesmo que:
 temp1 = "John"
 temp2 = 32
 person.name = temp1
 person.age = temp2
 ```
 
-And it is also available to indexers (`[]=`):
+E também está disponível para indexadores (`[]=`):
 
 ```crystal
 objects[1], objects[2] = 3, 4
 
-# Same as:
+# É o mesmo que:
 temp1 = 3
 temp2 = 4
 objects[1] = temp1

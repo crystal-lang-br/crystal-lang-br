@@ -1,12 +1,10 @@
-# Installation
+# Instalação
 
-Once you install the compiler using one of the following methods, make sure to read [Using the compiler](../using_the_compiler/README.md) to learn how to efficiently use it.
+Depois que você instalar o compilador através de um dos métodos a seguir, assegure-se de ter lido [Usando o compilador](../using_the_compiler/README.md) para aprender como usá-lo com eficiência.
 
-* [On Debian And Ubuntu](on_debian_and_ubuntu.html)
-* [On RedHat And CentOS](on_redhat_and_centos.html)
-* [On Arch Linux](on_arch_linux.html)
-* [On Mac OSX using Homebrew](on_mac_osx_using_homebrew.html)
-* [From a tar.gz](from_a_targz.html)
-* [From sources](from_source_repository.html)
-
-
+* [No Debian e Ubuntu](on_debian_and_ubuntu.md)
+* [No RedHat e CentOS](on_redhat_and_centos.md)
+* [No Arch Linux](on_arch_linux.md)
+* [No Mac OSX Usando Homebrew](on_mac_osx_using_homebrew.md)
+* [De um tar.gz](from_a_targz.md)
+* [Do código-fonte](from_source_repository.md)

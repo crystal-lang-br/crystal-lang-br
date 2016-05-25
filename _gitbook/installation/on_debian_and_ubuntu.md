@@ -1,16 +1,16 @@
-# On Debian and Ubuntu
+# No Debian e Ubuntu
 
-In Debian derived distributions, you can use the official Crystal repository.
+Nas distribuições derivadas de Debian, você pode utilizar o repositório oficial do Crystal.
 
-## Setup repository
+## Configuração do repositório
 
-First you have to add the repository to your APT configuration. For easy setup just run in your command line:
+Primeiramente você precisa adicionar o repositório à configuração do APT. Para facilitar a configuração, apenas execute isso no seu terminal:
 
 ```
   curl http://dist.crystal-lang.org/apt/setup.sh | sudo bash
 ```
 
-That will add the signing key and the repository configuration. If you prefer to do it manually, execute the following commands as *root*:
+Isso adicionará a chave de assinatura e a configuração do repositório. Se você prefere fazer isso manualmente, execute os seguintes comandos como *root*:
 
 ```
 apt-key adv --keyserver keys.gnupg.net --recv-keys 09617FD37CC06B54
@@ -18,16 +18,16 @@ echo "deb http://dist.crystal-lang.org/apt crystal main" > /etc/apt/sources.list
 apt-get update
 ```
 
-## Install
-Once the repository is configured you're ready to install Crystal:
+## Instalação
+Depois de configurar o repositório, você está pronto para instalar o Crystal:
 
 ```
 sudo apt-get install crystal
 ```
 
-## Upgrade
+## Atualização
 
-When a new Crystal version is released you can upgrade your system using:
+Quando uma nova versão do Crystal for lançada, você pode atualizar o seu sistema usando:
 
 ```
 sudo apt-get update

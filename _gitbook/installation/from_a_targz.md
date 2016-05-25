@@ -1,13 +1,13 @@
-# From a tar.gz
+# De um tar.gz
 
-If for any reason you can't or don't want to use one of the previous installation methods, you can still download Crystal in a standalone .tar.gz file with everything you need to get started.
+Se por algum motivo você não consegue ou não quer usar um dos métodos de instalação anteriores, você ainda pode baixar o Crystal como um arquivo .tar.gz único com tudo o que você precisa para começar.
 
-The latest files can be found on the Releases page at GitHub: https://github.com/crystal-lang/crystal/releases
+Os arquivos mais recentes podem ser encontrados na página de Releases no GitHub: https://github.com/crystal-lang/crystal/releases
 
-Download the file for your platform and uncompress it. Inside it you will have a `bin/crystal` executable.
+Baixe o arquivo para a sua plataforma e descompacte-o. Dentro dele haverá um executável `bin/crystal`.
 
-To make it simpler to use, you can create a symbolic link available in the path:
+Para facilitar o uso dele, você pode criar um link simbólico para disponibilizá-lo no seu path:
 
-`ln -s [full path to bin/crystal] /usr/local/bin/crystal`
+`ln -s [caminho completo para o bin/crystal] /usr/local/bin/crystal`
 
-Then you can invoke the compiler by just typing `crystal`.
+Dessa forma você consegue invocar o compilador apenas digitando `crystal`.
