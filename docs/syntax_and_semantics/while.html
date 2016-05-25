@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>while | Crystal Programming Language</title>
+        <title>while | Linguagem de Programação Crystal</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.3.2">
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="4.7.5" data-basepath=".." data-revision="Tue May 17 2016 17:12:34 GMT+0000 (UTC)">
+    <div class="book" data-level="4.7.5" data-basepath=".." data-revision="Wed May 25 2016 15:38:00 GMT-0300 (BRT)">
     
 
 <div class="book-summary">
@@ -60,7 +60,7 @@
                 
                         <i class="fa fa-check"></i>
                         
-                        Introduction
+                        Introdução
                     </a>
             
             
@@ -75,7 +75,7 @@
                         
                             <b>1.</b>
                         
-                        Installation
+                        Instalação
                     </a>
             
             
@@ -91,7 +91,7 @@
                         
                             <b>1.1.</b>
                         
-                        On Debian and Ubuntu
+                        No Debian e Ubuntu
                     </a>
             
             
@@ -106,7 +106,7 @@
                         
                             <b>1.2.</b>
                         
-                        On RedHat and CentOS
+                        No RedHat e CentOS
                     </a>
             
             
@@ -121,7 +121,7 @@
                         
                             <b>1.3.</b>
                         
-                        On Arch Linux
+                        No Arch Linux
                     </a>
             
             
@@ -136,7 +136,7 @@
                         
                             <b>1.4.</b>
                         
-                        On Mac OSX using Homebrew
+                        No Mac OSX usando Homebrew
                     </a>
             
             
@@ -151,7 +151,7 @@
                         
                             <b>1.5.</b>
                         
-                        From a tar.gz
+                        De um tar.gz
                     </a>
             
             
@@ -166,7 +166,7 @@
                         
                             <b>1.6.</b>
                         
-                        From sources
+                        Do código-fonte
                     </a>
             
             
@@ -186,7 +186,7 @@
                         
                             <b>2.</b>
                         
-                        Using the compiler
+                        Usando o compilador
                     </a>
             
             
@@ -201,7 +201,7 @@
                         
                             <b>3.</b>
                         
-                        Overview and Examples
+                        Visão-Geral e Exemplos
                     </a>
             
             
@@ -217,7 +217,7 @@
                         
                             <b>3.1.</b>
                         
-                        Hello World!
+                        Olá Mundo!
                     </a>
             
             
@@ -232,7 +232,7 @@
                         
                             <b>3.2.</b>
                         
-                        HTTP Server
+                        Servidor HTTP
                     </a>
             
             
@@ -252,7 +252,7 @@
                         
                             <b>4.</b>
                         
-                        Syntax and semantics
+                        Sintaxe e semântica
                     </a>
             
             
@@ -268,7 +268,7 @@
                         
                             <b>4.1.</b>
                         
-                        Comments
+                        Comentários
                     </a>
             
             
@@ -283,7 +283,7 @@
                         
                             <b>4.2.</b>
                         
-                        Literals
+                        Literais
                     </a>
             
             
@@ -514,7 +514,7 @@
                         
                             <b>4.3.</b>
                         
-                        Local variables
+                        Variáveis locais
                     </a>
             
             
@@ -529,7 +529,7 @@
                         
                             <b>4.4.</b>
                         
-                        Global variables
+                        Variáveis globais
                     </a>
             
             
@@ -544,7 +544,7 @@
                         
                             <b>4.5.</b>
                         
-                        Assignment
+                        Atribuição
                     </a>
             
             
@@ -560,7 +560,7 @@
                         
                             <b>4.5.1.</b>
                         
-                        Multiple assignment
+                        Atribuição múltipla
                     </a>
             
             
@@ -580,7 +580,7 @@
                         
                             <b>4.6.</b>
                         
-                        Union types
+                        Tipos união
                     </a>
             
             
@@ -595,7 +595,7 @@
                         
                             <b>4.7.</b>
                         
-                        Control expressions
+                        Expressões de controle
                     </a>
             
             
@@ -611,7 +611,7 @@
                         
                             <b>4.7.1.</b>
                         
-                        Truthy and falsey values
+                        Valores verdadeiros e falsos
                     </a>
             
             
@@ -642,7 +642,7 @@
                         
                             <b>4.7.2.1.</b>
                         
-                        As a suffix
+                        Como um sufixo
                     </a>
             
             
@@ -657,7 +657,7 @@
                         
                             <b>4.7.2.2.</b>
                         
-                        As an expression
+                        Como uma expressão
                     </a>
             
             
@@ -672,7 +672,7 @@
                         
                             <b>4.7.2.3.</b>
                         
-                        Ternary if
+                        if ternário
                     </a>
             
             
@@ -2126,7 +2126,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >Crystal Programming Language</a>
+        <a href="../" >Linguagem de Programação Crystal</a>
     </h1>
 </div>
 
@@ -2137,35 +2137,35 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="while">while</h1>
-<p>A <code>while</code> executes its body as long as its condition is <em>truthy</em>.</p>
-<pre><code class="lang-crystal"><span class="hljs-keyword">while</span> some_condition
-  do_this
+<p>Um <code>while</code> executa seu corpo enquanto sua condi&#xE7;&#xE3;o for <em>verdadeira</em>.</p>
+<pre><code class="lang-crystal"><span class="hljs-keyword">while</span> alguma_condicao
+  faz_isso
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>The condition is first tested and, if <em>truthy</em>, the body is executed. That is, the body might never be executed.</p>
-<p>A <code>while</code>&apos;s type is always <code>Nil</code>.</p>
-<p>Similar to an <code>if</code>, if a <code>while</code>&apos;s condition is a variable, the variable is guaranteed to not be <code>nil</code> inside the body. If the condition is an <code>var.is_a?(Type)</code> test, <code>var</code> is guaranteed to be of type Type inside the body. And if the condition is a <code>var.responds_to?(:method)</code>, <code>var</code> is guaranteed to be of a type that responds to that method.</p>
-<p>The type of a variable after a <code>while</code> depends on the type it had before the <code>while</code> and the type it had before leaving the <code>while</code>&apos;s body:</p>
+<p>Primeiro a condi&#xE7;&#xE3;o &#xE9; testada, e se for <em>verdadeira</em>, o corpo &#xE9; executado. Ou seja, pode ser que o corpo nunca seja executado.</p>
+<p>O tipo de um <code>while</code> &#xE9; sempre <code>Nil</code>.</p>
+<p>De maneira semelhante a um <code>if</code>, se a condi&#xE7;&#xE3;o de um <code>while</code> for uma vari&#xE1;vel, &#xE9; garantido que a vari&#xE1;vel n&#xE3;o &#xE9; <code>nil</code> dentro do corpo. Se a condi&#xE7;&#xE3;o for um teste <code>var.is_a?(Type)</code>, &#xE9; garantido que <code>var</code> &#xE9; do tipo Type dentro do corpo. E se a condi&#xE7;&#xE3;o for <code>var.responds_to?(:method)</code>, &#xE9; garantido que <code>var</code> &#xE9; de um tipo que responde a aquele m&#xE9;todo.</p>
+<p>O tipo de uma vari&#xE1;vel depois de um <code>while</code> depende do tipo que ela tinha antes do <code>while</code> e do tipo que ela tinha antes de deixar o corpo do <code>while</code>:</p>
 <pre><code class="lang-crystal">a = <span class="hljs-number">1</span>
-<span class="hljs-keyword">while</span> some_condition
+<span class="hljs-keyword">while</span> alguma_condicao
   <span class="hljs-comment"># a : Int32 | String</span>
-  a = <span class="hljs-string">&quot;hello&quot;</span>
+  a = <span class="hljs-string">&quot;ol&#xE1;&quot;</span>
   <span class="hljs-comment"># a : String</span>
   a.size
 <span class="hljs-keyword">end</span>
 <span class="hljs-comment"># a : Int32 | String</span>
 </code></pre>
-<h2 id="checking-the-condition-at-the-end-of-a-loop">Checking the condition at the end of a loop</h2>
-<p>If you need to execute the body at least once and then check for a breaking condition, you can do this:</p>
+<h2 id="checando-a-condi%C3%A7%C3%A3o-no-final-de-um-loop">Checando a condi&#xE7;&#xE3;o no final de um loop</h2>
+<p>Se voc&#xEA; precisa executar o corpo pelo menos uma vez e ent&#xE3;o checar por uma condi&#xE7;&#xE3;o de interrup&#xE7;&#xE3;o, voc&#xEA; pode fazer o seguinte:</p>
 <pre><code class="lang-crystal"><span class="hljs-keyword">while</span> <span class="hljs-literal">true</span>
-  do_something
-  <span class="hljs-keyword">break</span> <span class="hljs-keyword">if</span> some_condition
+  faz_alguma_coisa
+  <span class="hljs-keyword">break</span> <span class="hljs-keyword">if</span> alguma_condicao
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>Or use <code>loop</code>, found in the standard library:</p>
+<p>Ou usar o <code>loop</code>, encontrado na biblioteca padr&#xE3;o:</p>
 <pre><code class="lang-crystal">loop <span class="hljs-keyword">do</span>
-  do_something
-  <span class="hljs-keyword">break</span> <span class="hljs-keyword">if</span> some_condition
+  faz_alguma_coisa
+  <span class="hljs-keyword">break</span> <span class="hljs-keyword">if</span> alguma_condicao
 <span class="hljs-keyword">end</span>
 </code></pre>
 

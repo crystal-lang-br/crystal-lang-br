@@ -1,3 +1,3 @@
-# Control expressions
+# Expressões de controle
 
-Before talking about control expressions we need to know what *truthy* and *falsey* values are.
+Antes de falarmos sobre expressões de controle, precisamos saber quais são os valores *verdadeiros* (_truthy_) e *falsos* (_falsey_).

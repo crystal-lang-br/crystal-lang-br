@@ -1,14 +1,14 @@
-# As a suffix
+# Como um sufixo
 
-An `if` can be written as an expression’s suffix:
+Um `if` pode ser escrito como um sufixo de uma expressão:
 
 ```crystal
-a = 2 if some_condition
+a = 2 if alguma_condicao
 
-# The above is the same as:
-if some_condition
+# O código acima é o mesmo que:
+if alguma_condicao
   a = 2
 end
 ```
 
-This sometimes leads to code that is more natural to read.
+Às vezes isso leva a código que pode ser lido mais naturalmente.

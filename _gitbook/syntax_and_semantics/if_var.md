@@ -1,69 +1,69 @@
 # if var
 
-If a variable is the condition of an `if`, inside the `then` branch the variable will be considered as not having the `Nil` type:
+Se uma variável for a condição de um `if`, dentro do bloco `then` a variável será considerada como não tendo o tipo `Nil`:
 
 ```crystal
-a = some_condition ? nil : 3
-# a is Int32 or Nil
+a = alguma_condicao ? nil : 3
+# a é Int32 ou Nil
 
 if a
-  # Since the only way to get here is if a is truthy,
-  # a can't be nil. So here a is Int32.
+  # Já que o único jeito de cair aqui é se "a" for verdadeiro,
+  # "a" não pode ser nil. Então aqui "a" é Int32.
   a.abs
 end
 ```
 
-This also applies when a variable is assigned in an `if`'s condition:
+Isso também se aplica quando uma variável é atribuída em uma condição `if`:
 
 ```crystal
-if a = some_expression
-  # here a is not nil
+if a = alguma_expressao
+  # aqui "a" não é nil
 end
 ```
 
-This logic also applies if there are ands (`&&`) in the condition:
+Essa lógica também se aplica se houver _ands_ (`&&`) na condição:
 
 ```crystal
 if a && b
-  # here both a and b are guaranteed not to be Nil
+  # garante-se que aqui tanto "a" quanto "b" não são Nil
 end
 ```
 
-Here, the right-hand side of the `&&` expression is also guaranteed to have `a` as not `Nil`.
+Aqui, no lado direito da expressão `&&`, também é garantido que `a` não tem o valor `Nil`.
 
-Of course, reassigning a variable inside the `then` branch makes that variable have a new type based on the expression assigned.
+É claro, se o for atribuído novamente o valor da variável dentro do bloco `then`, essa variável terá um novo tipo baseado na expressão atribuída.
 
-The above logic **doesn’t** work with instance variables, class variables or global variables:
+A lógica acima **não funciona** com variáveis de instância, variáveis de classe ou variáveis globais:
 
 ```crystal
 if @a
-  # here @a can be nil
+  # aqui @a pode ser nil
 end
 ```
 
-This is because any method call could potentially affect that instance variable, rendering it `nil`. Another reason is that another thread could change that instance variable after checking the condition.
+Isso acontece porque qualquer chamada de método pode potencialmente afetar essa variável de instância, tornando ela `nil`. Outro motivo é que outra _thread_ poderia mudar essa variável de instância após checá-la na condição.
 
-To do something with `@a` only when it is not `nil` you have two options:
+Para fazer algo com `@a` somente se ele não for `nil`, você tem duas opções:
 
 ```crystal
-# First option: assign it to a variable
+# Primeira opção: atribua ele a uma variável
 if a = @a
-  # here a can't be nil
+  # aqui "a" não pode ser nil
 end
 
-# Second option: use `Object#try` found in the standard library
+# Segunda opção: use `Object#try`, encontrado na biblioteca padrão
 @a.try do |a|
-  # here a can't be nil
+  # aqui "a" não pode ser nil
 end
 ```
 
-That logic also doesn't work with proc and method calls, including getters and properties, because nilable (or, more generally, union-typed) procs and methods aren't guaranteed to return the same more-specific type on two successive calls.
+Essa lógica também não funciona com procs e chamadas de métodos, inclusive getters e propriedades, porque não se pode garantir que procs e métodos que podem ser `nil` (ou, mais genericamente, procs e métodos do tipo união) retornem o mesmo tipo específico em duas chamadas sucessivas.
 
 ```crystal
-if method # first call to a method that can return Int32 or Nil
-          # here we know that the first call did not return Nil
-  method  # second call can still return Int32 or Nil
+if method # primeira chamada ao método que pode retornar Int32 ou Nil
+          # aqui sabemos que a primeira chamada não retornou Nil
+  method  # a segunda chamada também ainda pode retornar Int32 ou Nil
 end
 ```
 
-The techniques described above for instance variables will also work for proc and method calls.
+A técnica descrita acima para variáveis de instância também funcionará com procs e chamadas de métodos.

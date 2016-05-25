@@ -1,21 +1,21 @@
 # if var.is_a?(...)
 
-If an `if`'s condition is an `is_a?` test, the type of a variable is guaranteed to be restricted by that type in the `then` branch.
+Se a condição de um `if` for um teste `is_a?`, garante-se que o tipo da variável está restrito ao tipo no bloco `then`.
 
 ```crystal
 if a.is_a?(String)
-  # here a is a String
+  # aqui "a" é uma String
 end
 
 if b.is_a?(Number)
-  # here b is a Number
+  # aqui "b" é um Number
 end
 ```
 
-Additionally, in the `else` branch the type of the variable is guaranteed to not be restricted by that type:
+Além disso, no bloco `else`, garante-se que o tipo da variável não está restrito a aquele tipo:
 
 ```crystal
-a = some_condition ? 1 : "hello"
+a = alguma_condicao ? 1 : "olá"
 # a : Int32 | String
 
 if a.is_a?(Number)
@@ -25,30 +25,30 @@ else
 end
 ```
 
-Note that you can use any type as an `is_a?` test, like abstract classes and modules.
+Perceba que vcê pode usar qualquer tipo como um teste `is_a?`, como por exemplo classes abstratas e módulos.
 
-The above also works if there are ands (`&&`) in the condition:
+O código acima também funciona se houver _ands_ (`&&`) na condição:
 
 ```crystal
 if a.is_a?(String) && b.is_a?(Number)
-  # here a is a String and b is a Number
+  # aqui "a" é uma String e "b" é um Number
 end
 ```
 
-The above **doesn’t** work with instance variables, class variables or global variables. To work with these, first assign them to a variable:
+O código acima **não funciona** com variáveis de instância, de classe ou globais. Para trabalhar com elas, primeiro atribua a uma variável:
 
 ```crystal
 if @a.is_a?(String)
-  # here @a is not guaranteed to be a String
+  # aqui não garante-se que @a seja uma String
 end
 
 a = @a
 if a.is_a?(String)
-  # here a is guaranteed to be a String
+  # aqui é garantido que "a" é uma String
 end
 
-# A bit shorter:
+# Versão um pouco mais curta:
 if (a = @a).is_a?(String)
-  # here a is guaranteed to be a String
+  # aqui é garantido que "a" é uma String
 end
 ```

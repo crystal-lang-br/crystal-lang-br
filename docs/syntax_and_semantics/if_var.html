@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>if var | Crystal Programming Language</title>
+        <title>if var | Linguagem de Programação Crystal</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.3.2">
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="4.7.2.4" data-basepath=".." data-revision="Tue May 17 2016 17:12:34 GMT+0000 (UTC)">
+    <div class="book" data-level="4.7.2.4" data-basepath=".." data-revision="Wed May 25 2016 15:38:00 GMT-0300 (BRT)">
     
 
 <div class="book-summary">
@@ -60,7 +60,7 @@
                 
                         <i class="fa fa-check"></i>
                         
-                        Introduction
+                        Introdução
                     </a>
             
             
@@ -75,7 +75,7 @@
                         
                             <b>1.</b>
                         
-                        Installation
+                        Instalação
                     </a>
             
             
@@ -91,7 +91,7 @@
                         
                             <b>1.1.</b>
                         
-                        On Debian and Ubuntu
+                        No Debian e Ubuntu
                     </a>
             
             
@@ -106,7 +106,7 @@
                         
                             <b>1.2.</b>
                         
-                        On RedHat and CentOS
+                        No RedHat e CentOS
                     </a>
             
             
@@ -121,7 +121,7 @@
                         
                             <b>1.3.</b>
                         
-                        On Arch Linux
+                        No Arch Linux
                     </a>
             
             
@@ -136,7 +136,7 @@
                         
                             <b>1.4.</b>
                         
-                        On Mac OSX using Homebrew
+                        No Mac OSX usando Homebrew
                     </a>
             
             
@@ -151,7 +151,7 @@
                         
                             <b>1.5.</b>
                         
-                        From a tar.gz
+                        De um tar.gz
                     </a>
             
             
@@ -166,7 +166,7 @@
                         
                             <b>1.6.</b>
                         
-                        From sources
+                        Do código-fonte
                     </a>
             
             
@@ -186,7 +186,7 @@
                         
                             <b>2.</b>
                         
-                        Using the compiler
+                        Usando o compilador
                     </a>
             
             
@@ -201,7 +201,7 @@
                         
                             <b>3.</b>
                         
-                        Overview and Examples
+                        Visão-Geral e Exemplos
                     </a>
             
             
@@ -217,7 +217,7 @@
                         
                             <b>3.1.</b>
                         
-                        Hello World!
+                        Olá Mundo!
                     </a>
             
             
@@ -232,7 +232,7 @@
                         
                             <b>3.2.</b>
                         
-                        HTTP Server
+                        Servidor HTTP
                     </a>
             
             
@@ -252,7 +252,7 @@
                         
                             <b>4.</b>
                         
-                        Syntax and semantics
+                        Sintaxe e semântica
                     </a>
             
             
@@ -268,7 +268,7 @@
                         
                             <b>4.1.</b>
                         
-                        Comments
+                        Comentários
                     </a>
             
             
@@ -283,7 +283,7 @@
                         
                             <b>4.2.</b>
                         
-                        Literals
+                        Literais
                     </a>
             
             
@@ -514,7 +514,7 @@
                         
                             <b>4.3.</b>
                         
-                        Local variables
+                        Variáveis locais
                     </a>
             
             
@@ -529,7 +529,7 @@
                         
                             <b>4.4.</b>
                         
-                        Global variables
+                        Variáveis globais
                     </a>
             
             
@@ -544,7 +544,7 @@
                         
                             <b>4.5.</b>
                         
-                        Assignment
+                        Atribuição
                     </a>
             
             
@@ -560,7 +560,7 @@
                         
                             <b>4.5.1.</b>
                         
-                        Multiple assignment
+                        Atribuição múltipla
                     </a>
             
             
@@ -580,7 +580,7 @@
                         
                             <b>4.6.</b>
                         
-                        Union types
+                        Tipos união
                     </a>
             
             
@@ -595,7 +595,7 @@
                         
                             <b>4.7.</b>
                         
-                        Control expressions
+                        Expressões de controle
                     </a>
             
             
@@ -611,7 +611,7 @@
                         
                             <b>4.7.1.</b>
                         
-                        Truthy and falsey values
+                        Valores verdadeiros e falsos
                     </a>
             
             
@@ -642,7 +642,7 @@
                         
                             <b>4.7.2.1.</b>
                         
-                        As a suffix
+                        Como um sufixo
                     </a>
             
             
@@ -657,7 +657,7 @@
                         
                             <b>4.7.2.2.</b>
                         
-                        As an expression
+                        Como uma expressão
                     </a>
             
             
@@ -672,7 +672,7 @@
                         
                             <b>4.7.2.3.</b>
                         
-                        Ternary if
+                        if ternário
                     </a>
             
             
@@ -2126,7 +2126,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >Crystal Programming Language</a>
+        <a href="../" >Linguagem de Programação Crystal</a>
     </h1>
 </div>
 
@@ -2137,52 +2137,52 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="if-var">if var</h1>
-<p>If a variable is the condition of an <code>if</code>, inside the <code>then</code> branch the variable will be considered as not having the <code>Nil</code> type:</p>
-<pre><code class="lang-crystal">a = some_condition ? <span class="hljs-literal">nil</span> <span class="hljs-symbol">:</span> <span class="hljs-number">3</span>
-<span class="hljs-comment"># a is Int32 or Nil</span>
+<p>Se uma vari&#xE1;vel for a condi&#xE7;&#xE3;o de um <code>if</code>, dentro do bloco <code>then</code> a vari&#xE1;vel ser&#xE1; considerada como n&#xE3;o tendo o tipo <code>Nil</code>:</p>
+<pre><code class="lang-crystal">a = alguma_condicao ? <span class="hljs-literal">nil</span> <span class="hljs-symbol">:</span> <span class="hljs-number">3</span>
+<span class="hljs-comment"># a &#xE9; Int32 ou Nil</span>
 
 <span class="hljs-keyword">if</span> a
-  <span class="hljs-comment"># Since the only way to get here is if a is truthy,</span>
-  <span class="hljs-comment"># a can&apos;t be nil. So here a is Int32.</span>
+  <span class="hljs-comment"># J&#xE1; que o &#xFA;nico jeito de cair aqui &#xE9; se &quot;a&quot; for verdadeiro,</span>
+  <span class="hljs-comment"># &quot;a&quot; n&#xE3;o pode ser nil. Ent&#xE3;o aqui &quot;a&quot; &#xE9; Int32.</span>
   a.abs
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>This also applies when a variable is assigned in an <code>if</code>&apos;s condition:</p>
-<pre><code class="lang-crystal"><span class="hljs-keyword">if</span> a = some_expression
-  <span class="hljs-comment"># here a is not nil</span>
+<p>Isso tamb&#xE9;m se aplica quando uma vari&#xE1;vel &#xE9; atribu&#xED;da em uma condi&#xE7;&#xE3;o <code>if</code>:</p>
+<pre><code class="lang-crystal"><span class="hljs-keyword">if</span> a = alguma_expressao
+  <span class="hljs-comment"># aqui &quot;a&quot; n&#xE3;o &#xE9; nil</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>This logic also applies if there are ands (<code>&amp;&amp;</code>) in the condition:</p>
+<p>Essa l&#xF3;gica tamb&#xE9;m se aplica se houver <em>ands</em> (<code>&amp;&amp;</code>) na condi&#xE7;&#xE3;o:</p>
 <pre><code class="lang-crystal"><span class="hljs-keyword">if</span> a &amp;&amp; b
-  <span class="hljs-comment"># here both a and b are guaranteed not to be Nil</span>
+  <span class="hljs-comment"># garante-se que aqui tanto &quot;a&quot; quanto &quot;b&quot; n&#xE3;o s&#xE3;o Nil</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>Here, the right-hand side of the <code>&amp;&amp;</code> expression is also guaranteed to have <code>a</code> as not <code>Nil</code>.</p>
-<p>Of course, reassigning a variable inside the <code>then</code> branch makes that variable have a new type based on the expression assigned.</p>
-<p>The above logic <strong>doesn&#x2019;t</strong> work with instance variables, class variables or global variables:</p>
+<p>Aqui, no lado direito da express&#xE3;o <code>&amp;&amp;</code>, tamb&#xE9;m &#xE9; garantido que <code>a</code> n&#xE3;o tem o valor <code>Nil</code>.</p>
+<p>&#xC9; claro, se o for atribu&#xED;do novamente o valor da vari&#xE1;vel dentro do bloco <code>then</code>, essa vari&#xE1;vel ter&#xE1; um novo tipo baseado na express&#xE3;o atribu&#xED;da.</p>
+<p>A l&#xF3;gica acima <strong>n&#xE3;o funciona</strong> com vari&#xE1;veis de inst&#xE2;ncia, vari&#xE1;veis de classe ou vari&#xE1;veis globais:</p>
 <pre><code class="lang-crystal"><span class="hljs-keyword">if</span> <span class="hljs-variable">@a</span>
-  <span class="hljs-comment"># here @a can be nil</span>
+  <span class="hljs-comment"># aqui @a pode ser nil</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>This is because any method call could potentially affect that instance variable, rendering it <code>nil</code>. Another reason is that another thread could change that instance variable after checking the condition.</p>
-<p>To do something with <code>@a</code> only when it is not <code>nil</code> you have two options:</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># First option: assign it to a variable</span>
+<p>Isso acontece porque qualquer chamada de m&#xE9;todo pode potencialmente afetar essa vari&#xE1;vel de inst&#xE2;ncia, tornando ela <code>nil</code>. Outro motivo &#xE9; que outra <em>thread</em> poderia mudar essa vari&#xE1;vel de inst&#xE2;ncia ap&#xF3;s chec&#xE1;-la na condi&#xE7;&#xE3;o.</p>
+<p>Para fazer algo com <code>@a</code> somente se ele n&#xE3;o for <code>nil</code>, voc&#xEA; tem duas op&#xE7;&#xF5;es:</p>
+<pre><code class="lang-crystal"><span class="hljs-comment"># Primeira op&#xE7;&#xE3;o: atribua ele a uma vari&#xE1;vel</span>
 <span class="hljs-keyword">if</span> a = <span class="hljs-variable">@a</span>
-  <span class="hljs-comment"># here a can&apos;t be nil</span>
+  <span class="hljs-comment"># aqui &quot;a&quot; n&#xE3;o pode ser nil</span>
 <span class="hljs-keyword">end</span>
 
-<span class="hljs-comment"># Second option: use `Object#try` found in the standard library</span>
+<span class="hljs-comment"># Segunda op&#xE7;&#xE3;o: use `Object#try`, encontrado na biblioteca padr&#xE3;o</span>
 <span class="hljs-variable">@a</span>.try <span class="hljs-keyword">do</span> |a|
-  <span class="hljs-comment"># here a can&apos;t be nil</span>
+  <span class="hljs-comment"># aqui &quot;a&quot; n&#xE3;o pode ser nil</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>That logic also doesn&apos;t work with proc and method calls, including getters and properties, because nilable (or, more generally, union-typed) procs and methods aren&apos;t guaranteed to return the same more-specific type on two successive calls.</p>
-<pre><code class="lang-crystal"><span class="hljs-keyword">if</span> method <span class="hljs-comment"># first call to a method that can return Int32 or Nil</span>
-          <span class="hljs-comment"># here we know that the first call did not return Nil</span>
-  method  <span class="hljs-comment"># second call can still return Int32 or Nil</span>
+<p>Essa l&#xF3;gica tamb&#xE9;m n&#xE3;o funciona com procs e chamadas de m&#xE9;todos, inclusive getters e propriedades, porque n&#xE3;o se pode garantir que procs e m&#xE9;todos que podem ser <code>nil</code> (ou, mais genericamente, procs e m&#xE9;todos do tipo uni&#xE3;o) retornem o mesmo tipo espec&#xED;fico em duas chamadas sucessivas.</p>
+<pre><code class="lang-crystal"><span class="hljs-keyword">if</span> method <span class="hljs-comment"># primeira chamada ao m&#xE9;todo que pode retornar Int32 ou Nil</span>
+          <span class="hljs-comment"># aqui sabemos que a primeira chamada n&#xE3;o retornou Nil</span>
+  method  <span class="hljs-comment"># a segunda chamada tamb&#xE9;m ainda pode retornar Int32 ou Nil</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>The techniques described above for instance variables will also work for proc and method calls.</p>
+<p>A t&#xE9;cnica descrita acima para vari&#xE1;veis de inst&#xE2;ncia tamb&#xE9;m funcionar&#xE1; com procs e chamadas de m&#xE9;todos.</p>
 
                     
                     </section>
@@ -2193,7 +2193,7 @@
         </div>
 
         
-        <a href="../syntax_and_semantics/ternary_if.html" class="navigation navigation-prev " aria-label="Previous page: Ternary if"><i class="fa fa-angle-left"></i></a>
+        <a href="../syntax_and_semantics/ternary_if.html" class="navigation navigation-prev " aria-label="Previous page: if ternário"><i class="fa fa-angle-left"></i></a>
         
         
         <a href="../syntax_and_semantics/if_varis_a.html" class="navigation navigation-next " aria-label="Next page: if var.is_a?(...)"><i class="fa fa-angle-right"></i></a>

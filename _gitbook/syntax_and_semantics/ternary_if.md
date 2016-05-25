@@ -1,11 +1,11 @@
-# Ternary if
+# if ternário
 
-The ternary `if` allows writing an `if` in a shorter way:
+O `if` ternário permite escrever um `if` de uma maneira mais curta:
 
 ```crystal
 a = 1 > 2 ? 3 : 4
 
-# The above is the same as:
+# O código acima é o mesmo que:
 a = if 1 > 2
       3
     else
