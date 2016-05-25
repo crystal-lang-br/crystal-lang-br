@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Proc | Crystal Programming Language</title>
+        <title>Proc | Linguagem de Programação Crystal</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.3.2">
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="4.2.14" data-basepath="../.." data-revision="Tue May 17 2016 17:12:34 GMT+0000 (UTC)">
+    <div class="book" data-level="4.2.14" data-basepath="../.." data-revision="Wed May 25 2016 15:38:00 GMT-0300 (BRT)">
     
 
 <div class="book-summary">
@@ -60,7 +60,7 @@
                 
                         <i class="fa fa-check"></i>
                         
-                        Introduction
+                        Introdução
                     </a>
             
             
@@ -75,7 +75,7 @@
                         
                             <b>1.</b>
                         
-                        Installation
+                        Instalação
                     </a>
             
             
@@ -91,7 +91,7 @@
                         
                             <b>1.1.</b>
                         
-                        On Debian and Ubuntu
+                        No Debian e Ubuntu
                     </a>
             
             
@@ -106,7 +106,7 @@
                         
                             <b>1.2.</b>
                         
-                        On RedHat and CentOS
+                        No RedHat e CentOS
                     </a>
             
             
@@ -121,7 +121,7 @@
                         
                             <b>1.3.</b>
                         
-                        On Arch Linux
+                        No Arch Linux
                     </a>
             
             
@@ -136,7 +136,7 @@
                         
                             <b>1.4.</b>
                         
-                        On Mac OSX using Homebrew
+                        No Mac OSX usando Homebrew
                     </a>
             
             
@@ -151,7 +151,7 @@
                         
                             <b>1.5.</b>
                         
-                        From a tar.gz
+                        De um tar.gz
                     </a>
             
             
@@ -166,7 +166,7 @@
                         
                             <b>1.6.</b>
                         
-                        From sources
+                        Do código-fonte
                     </a>
             
             
@@ -186,7 +186,7 @@
                         
                             <b>2.</b>
                         
-                        Using the compiler
+                        Usando o compilador
                     </a>
             
             
@@ -201,7 +201,7 @@
                         
                             <b>3.</b>
                         
-                        Overview and Examples
+                        Visão-Geral e Exemplos
                     </a>
             
             
@@ -217,7 +217,7 @@
                         
                             <b>3.1.</b>
                         
-                        Hello World!
+                        Olá Mundo!
                     </a>
             
             
@@ -232,7 +232,7 @@
                         
                             <b>3.2.</b>
                         
-                        HTTP Server
+                        Servidor HTTP
                     </a>
             
             
@@ -252,7 +252,7 @@
                         
                             <b>4.</b>
                         
-                        Syntax and semantics
+                        Sintaxe e semântica
                     </a>
             
             
@@ -268,7 +268,7 @@
                         
                             <b>4.1.</b>
                         
-                        Comments
+                        Comentários
                     </a>
             
             
@@ -283,7 +283,7 @@
                         
                             <b>4.2.</b>
                         
-                        Literals
+                        Literais
                     </a>
             
             
@@ -514,7 +514,7 @@
                         
                             <b>4.3.</b>
                         
-                        Local variables
+                        Variáveis locais
                     </a>
             
             
@@ -529,7 +529,7 @@
                         
                             <b>4.4.</b>
                         
-                        Global variables
+                        Variáveis globais
                     </a>
             
             
@@ -544,7 +544,7 @@
                         
                             <b>4.5.</b>
                         
-                        Assignment
+                        Atribuição
                     </a>
             
             
@@ -560,7 +560,7 @@
                         
                             <b>4.5.1.</b>
                         
-                        Multiple assignment
+                        Atribuição múltipla
                     </a>
             
             
@@ -580,7 +580,7 @@
                         
                             <b>4.6.</b>
                         
-                        Union types
+                        Tipos união
                     </a>
             
             
@@ -595,7 +595,7 @@
                         
                             <b>4.7.</b>
                         
-                        Control expressions
+                        Expressões de controle
                     </a>
             
             
@@ -611,7 +611,7 @@
                         
                             <b>4.7.1.</b>
                         
-                        Truthy and falsey values
+                        Valores verdadeiros e falsos
                     </a>
             
             
@@ -642,7 +642,7 @@
                         
                             <b>4.7.2.1.</b>
                         
-                        As a suffix
+                        Como um sufixo
                     </a>
             
             
@@ -657,7 +657,7 @@
                         
                             <b>4.7.2.2.</b>
                         
-                        As an expression
+                        Como uma expressão
                     </a>
             
             
@@ -672,7 +672,7 @@
                         
                             <b>4.7.2.3.</b>
                         
-                        Ternary if
+                        if ternário
                     </a>
             
             
@@ -2126,7 +2126,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../" >Crystal Programming Language</a>
+        <a href="../../" >Linguagem de Programação Crystal</a>
     </h1>
 </div>
 
@@ -2137,44 +2137,44 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="proc">Proc</h1>
-<p>A <a href="http://crystal-lang.org/api/Proc.html" target="_blank">Proc</a> represents a function pointer with an optional context (the closure data). It is typically created with a proc literal:</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># A proc without arguments</span>
+<p>Uma <a href="http://crystal-lang.org/api/Proc.html" target="_blank">Proc</a> representa o ponteiro de uma fun&#xE7;&#xE3;o com um contexto opcional (os dados do ambiente). Geralmente &#xE9; criado com um literal de proc:</p>
+<pre><code class="lang-crystal"><span class="hljs-comment"># Uma proc sem argumentos:</span>
 -&gt;{ <span class="hljs-number">1</span> } <span class="hljs-comment"># Proc(Int32)</span>
 
-<span class="hljs-comment"># A proc with one argument</span>
+<span class="hljs-comment"># Uma proc com um argumento:</span>
 -&gt;(x <span class="hljs-symbol">:</span> <span class="hljs-constant">Int32</span>) { x.to_s } <span class="hljs-comment"># Proc(Int32, String)</span>
 
-<span class="hljs-comment"># A proc with two arguments:</span>
+<span class="hljs-comment"># Uma proc com dois argumentos:</span>
 -&gt;(x <span class="hljs-symbol">:</span> <span class="hljs-constant">Int32</span>, y <span class="hljs-symbol">:</span> <span class="hljs-constant">Int32</span>) { x + y } <span class="hljs-comment"># Proc(Int32, Int32, Int32)</span>
 </code></pre>
-<p>The types of the arguments are mandatory, except when directly sending a proc literal to a lib <code>fun</code> in C bindings.</p>
-<p>The return type is inferred from the proc&apos;s body.</p>
-<p>A special <code>new</code> method is provided too:</p>
+<p>Os tipos dos argumentos s&#xE3;o obrigat&#xF3;rios, exceto ao enviar diretamente um literal de proc a uma <code>fun</code> de uma lib em bindings para C.</p>
+<p>O tipo do retorno &#xE9; inferido do corpo da proc.</p>
+<p>Tamb&#xE9;m &#xE9; disponibilizado um m&#xE9;todo <code>new</code> especial:</p>
 <pre><code class="lang-crystal"><span class="hljs-constant">Proc</span>(<span class="hljs-constant">Int32</span>, <span class="hljs-constant">String</span>).new { |x| x.to_s } <span class="hljs-comment"># Proc(Int32, String)</span>
 </code></pre>
-<p>This form allows you to specify the return type and to check it against the proc&apos;s body.</p>
-<h2 id="the-proc-type">The Proc type</h2>
-<p>To denote a Proc type you can write:</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># A Proc accepting a single Int32 argument and returning a String</span>
+<p>Esta forma permite que voc&#xEA; especifique o tipo de retorno e verifique-o em rela&#xE7;&#xE3;o ao corpo da proc.</p>
+<h2 id="o-tipo-proc">O tipo Proc</h2>
+<p>Para denotar o tipo Proc, voc&#xEA; pode escrever:</p>
+<pre><code class="lang-crystal"><span class="hljs-comment"># Uma Proc aceitando um &#xFA;nico argumento Int32 e retornando uma String</span>
 <span class="hljs-constant">Proc</span>(<span class="hljs-constant">Int32</span>, <span class="hljs-constant">String</span>)
 
-<span class="hljs-comment"># A proc accepting no arguments and returning Void</span>
+<span class="hljs-comment"># Uma proc que n&#xE3;o aceita nenhum argumento e retorna Void</span>
 <span class="hljs-constant">Proc</span>(<span class="hljs-constant">Void</span>)
 
-<span class="hljs-comment"># A proc accepting two arguments (one Int32 and one String) and returning a Char</span>
+<span class="hljs-comment"># Uma proc que aceita dois argumentos (um Int32 e uma String) e retorna um Char</span>
 <span class="hljs-constant">Proc</span>(<span class="hljs-constant">Int32</span>, <span class="hljs-constant">String</span>, <span class="hljs-constant">Char</span>)
 </code></pre>
-<p>In type restrictions, generic type arguments and other places where a type is expected, you can use a shorter syntax, as explained in the <a href="type_grammar.html">type</a>:</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># An array of Proc(Int32, String, Char)</span>
+<p>Nas restri&#xE7;&#xF5;es de tipos, argumentos de tipo gen&#xE9;rico e outros lugares onde espera-se um tipo, voc&#xEA; pode usar uma sintaxe mais curta, conforme explicado no cap&#xED;tulo sobre <a href="../type_grammar.html">tipos</a>:</p>
+<pre><code class="lang-crystal"><span class="hljs-comment"># Um array de Proc(Int32, String, Char)</span>
 <span class="hljs-constant">Array</span>(<span class="hljs-constant">Int32</span>, <span class="hljs-constant">String</span> -&gt; <span class="hljs-constant">Char</span>)
 </code></pre>
-<h2 id="invoking">Invoking</h2>
-<p>To invoke a Proc, you invoke the <code>call</code> method on it. The number of arguments must match the proc&apos;s type:</p>
+<h2 id="invocando">Invocando</h2>
+<p>Para invocar uma Proc, voc&#xEA; chama o m&#xE9;todo <code>call</code> dela. O n&#xFA;mero de argumentos deve coincidir com o tipo da proc:</p>
 <pre><code class="lang-crystal">proc = -&gt;(x <span class="hljs-symbol">:</span> <span class="hljs-constant">Int32</span>, y <span class="hljs-symbol">:</span> <span class="hljs-constant">Int32</span>) { x + y }
 proc.call(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">#=&gt; 3</span>
 </code></pre>
-<h2 id="from-methods">From methods</h2>
-<p>A Proc can be created from an existing method:</p>
+<h2 id="a-partir-de-m%C3%A9todos">A Partir de M&#xE9;todos</h2>
+<p>Uma Proc pode ser criada a partir de um m&#xE9;todo existente:</p>
 <pre><code class="lang-crystal"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">one</span></span>
   <span class="hljs-number">1</span>
 <span class="hljs-keyword">end</span>
@@ -2182,7 +2182,7 @@ proc.call(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>
 proc = -&gt;one
 proc.call <span class="hljs-comment">#=&gt; 1</span>
 </code></pre>
-<p>If the method has arguments, you must specify their types:</p>
+<p>Se o m&#xE9;todo tiver argumentos, voc&#xEA; precisa especificar seus tipos:</p>
 <pre><code class="lang-crystal"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plus_one</span></span>(x)
   x + <span class="hljs-number">1</span>
 <span class="hljs-keyword">end</span>
@@ -2190,7 +2190,7 @@ proc.call <span class="hljs-comment">#=&gt; 1</span>
 proc = -&gt;plus_one(<span class="hljs-constant">Int32</span>)
 proc.call(<span class="hljs-number">41</span>) <span class="hljs-comment">#=&gt; 42</span>
 </code></pre>
-<p>A proc can optionally specify a receiver:</p>
+<p>Uma proc pode opcionalmente especificar um recept&#xE1;culo:</p>
 <pre><code class="lang-crystal">str = <span class="hljs-string">&quot;hello&quot;</span>
 proc = -&gt;str.count(<span class="hljs-constant">Char</span>)
 proc.call(<span class="hljs-string">&apos;e&apos;</span>) <span class="hljs-comment">#=&gt; 1</span>
@@ -2209,7 +2209,7 @@ proc.call(<span class="hljs-string">&apos;l&apos;</span>) <span class="hljs-comm
         <a href="../../syntax_and_semantics/literals/named_tuple.html" class="navigation navigation-prev " aria-label="Previous page: NamedTuple"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../syntax_and_semantics/local_variables.html" class="navigation navigation-next " aria-label="Next page: Local variables"><i class="fa fa-angle-right"></i></a>
+        <a href="../../syntax_and_semantics/local_variables.html" class="navigation navigation-next " aria-label="Next page: Variáveis locais"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

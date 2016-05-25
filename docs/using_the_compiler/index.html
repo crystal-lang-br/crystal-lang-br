@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Using the compiler | Crystal Programming Language</title>
+        <title>Usando o compilador | Linguagem de Programação Crystal</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.3.2">
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="2" data-basepath=".." data-revision="Tue May 17 2016 17:12:34 GMT+0000 (UTC)">
+    <div class="book" data-level="2" data-basepath=".." data-revision="Wed May 25 2016 15:38:00 GMT-0300 (BRT)">
     
 
 <div class="book-summary">
@@ -60,7 +60,7 @@
                 
                         <i class="fa fa-check"></i>
                         
-                        Introduction
+                        Introdução
                     </a>
             
             
@@ -75,7 +75,7 @@
                         
                             <b>1.</b>
                         
-                        Installation
+                        Instalação
                     </a>
             
             
@@ -91,7 +91,7 @@
                         
                             <b>1.1.</b>
                         
-                        On Debian and Ubuntu
+                        No Debian e Ubuntu
                     </a>
             
             
@@ -106,7 +106,7 @@
                         
                             <b>1.2.</b>
                         
-                        On RedHat and CentOS
+                        No RedHat e CentOS
                     </a>
             
             
@@ -121,7 +121,7 @@
                         
                             <b>1.3.</b>
                         
-                        On Arch Linux
+                        No Arch Linux
                     </a>
             
             
@@ -136,7 +136,7 @@
                         
                             <b>1.4.</b>
                         
-                        On Mac OSX using Homebrew
+                        No Mac OSX usando Homebrew
                     </a>
             
             
@@ -151,7 +151,7 @@
                         
                             <b>1.5.</b>
                         
-                        From a tar.gz
+                        De um tar.gz
                     </a>
             
             
@@ -166,7 +166,7 @@
                         
                             <b>1.6.</b>
                         
-                        From sources
+                        Do código-fonte
                     </a>
             
             
@@ -186,7 +186,7 @@
                         
                             <b>2.</b>
                         
-                        Using the compiler
+                        Usando o compilador
                     </a>
             
             
@@ -201,7 +201,7 @@
                         
                             <b>3.</b>
                         
-                        Overview and Examples
+                        Visão-Geral e Exemplos
                     </a>
             
             
@@ -217,7 +217,7 @@
                         
                             <b>3.1.</b>
                         
-                        Hello World!
+                        Olá Mundo!
                     </a>
             
             
@@ -232,7 +232,7 @@
                         
                             <b>3.2.</b>
                         
-                        HTTP Server
+                        Servidor HTTP
                     </a>
             
             
@@ -252,7 +252,7 @@
                         
                             <b>4.</b>
                         
-                        Syntax and semantics
+                        Sintaxe e semântica
                     </a>
             
             
@@ -268,7 +268,7 @@
                         
                             <b>4.1.</b>
                         
-                        Comments
+                        Comentários
                     </a>
             
             
@@ -283,7 +283,7 @@
                         
                             <b>4.2.</b>
                         
-                        Literals
+                        Literais
                     </a>
             
             
@@ -514,7 +514,7 @@
                         
                             <b>4.3.</b>
                         
-                        Local variables
+                        Variáveis locais
                     </a>
             
             
@@ -529,7 +529,7 @@
                         
                             <b>4.4.</b>
                         
-                        Global variables
+                        Variáveis globais
                     </a>
             
             
@@ -544,7 +544,7 @@
                         
                             <b>4.5.</b>
                         
-                        Assignment
+                        Atribuição
                     </a>
             
             
@@ -560,7 +560,7 @@
                         
                             <b>4.5.1.</b>
                         
-                        Multiple assignment
+                        Atribuição múltipla
                     </a>
             
             
@@ -580,7 +580,7 @@
                         
                             <b>4.6.</b>
                         
-                        Union types
+                        Tipos união
                     </a>
             
             
@@ -595,7 +595,7 @@
                         
                             <b>4.7.</b>
                         
-                        Control expressions
+                        Expressões de controle
                     </a>
             
             
@@ -611,7 +611,7 @@
                         
                             <b>4.7.1.</b>
                         
-                        Truthy and falsey values
+                        Valores verdadeiros e falsos
                     </a>
             
             
@@ -642,7 +642,7 @@
                         
                             <b>4.7.2.1.</b>
                         
-                        As a suffix
+                        Como um sufixo
                     </a>
             
             
@@ -657,7 +657,7 @@
                         
                             <b>4.7.2.2.</b>
                         
-                        As an expression
+                        Como uma expressão
                     </a>
             
             
@@ -672,7 +672,7 @@
                         
                             <b>4.7.2.3.</b>
                         
-                        Ternary if
+                        if ternário
                     </a>
             
             
@@ -2126,7 +2126,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >Crystal Programming Language</a>
+        <a href="../" >Linguagem de Programação Crystal</a>
     </h1>
 </div>
 
@@ -2136,39 +2136,39 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="using-the-compiler">Using the compiler</h1>
-<p>Once you <a href="../installation/index.html">install</a> the compiler you will have a <code>crystal</code> binary at your disposal.</p>
-<p>In the next sections a dollar sign (<code>$</code>) denotes the command line.</p>
-<h2 id="compiling-and-running-at-once">Compiling and running at once</h2>
-<p>To compile and run a program in a single shot you can invoke <code>crystal</code> with a single filename:</p>
-<pre><code>$ crystal some_program.cr
-</code></pre><p>Crystal files end with the <code>.cr</code> extension.</p>
-<p>Alternative you can use the <code>run</code> command:</p>
-<pre><code>$ crystal run some_program.cr
-</code></pre><h2 id="creating-an-executable">Creating an executable</h2>
-<p>To create an executable use the <code>build</code> command:</p>
-<pre><code>$ crystal build some_program.cr
-</code></pre><p>This will create a <code>some_program</code> file that you can execute:</p>
-<pre><code>$ ./some_program
-</code></pre><p><strong>Note:</strong> By default the generated executables <strong>are not fully optimized</strong>. To turn optimizations on, use the <code>--release</code> flag:</p>
-<pre><code>$ crystal build some_program.cr --release
-</code></pre><p>Make sure to always use <code>--release</code> for production-ready executables and when performing benchmarks.</p>
-<p>The reason for this is that performance without full optimizations is still pretty good and provides fast compile times, so you can use the <code>crystal</code> command almost as if it were an interpreter.</p>
-<h2 id="creating-a-project-or-library">Creating a project or library</h2>
-<p>Use the <code>init</code> command to create a Crystal project with the standard directory structure.</p>
-<pre><code>$ crystal init lib MyCoolLib
-      create  MyCoolLib/.gitignore
-      create  MyCoolLib/LICENSE
-      create  MyCoolLib/README.md
-      create  MyCoolLib/.travis.yml
-      create  MyCoolLib/shard.yml
-      create  MyCoolLib/src/MyCoolLib.cr
-      create  MyCoolLib/src/MyCoolLib/version.cr
-      create  MyCoolLib/spec/spec_helper.cr
-      create  MyCoolLib/spec/MyCoolLib_spec.cr
-Initialized empty Git repository in ~/MyCoolLib/.git/
-</code></pre><h2 id="other-commands-and-options">Other commands and options</h2>
-<p>To see the full set of commands, invoke <code>crystal</code> without arguments.</p>
+                        <h1 id="usando-o-compilador">Usando o Compilador</h1>
+<p>Depois de <a href="../installation/index.html">instalar</a> o compilador, voc&#xEA; ter&#xE1; um bin&#xE1;rio <code>crystal</code> &#xE0; sua disposi&#xE7;&#xE3;o.</p>
+<p>Nas pr&#xF3;ximas se&#xE7;&#xF5;es, o sinal de d&#xF3;lar (<code>$</code>) denota o terminal.</p>
+<h2 id="compilando-e-rodando-ao-mesmo-tempo">Compilando e rodando ao mesmo tempo</h2>
+<p>Para compilar e imediatamente rodar um programa, voc&#xEA; pode invocar <code>crystal</code> com um &#xFA;nico nome de arquivo:</p>
+<pre><code>$ crystal algum_programa.cr
+</code></pre><p>Os arquivos do Crystal terminam com a extens&#xE3;o <code>.cr</code>.</p>
+<p>Alternativamente, voc&#xEA; pode usar o comando <code>run</code>:</p>
+<pre><code>$ crystal run algum_programa.cr
+</code></pre><h2 id="criando-um-execut%C3%A1vel">Criando um execut&#xE1;vel</h2>
+<p>Para criar um execut&#xE1;vel, use o comando <code>build</code>:</p>
+<pre><code>$ crystal build algum_programa.cr
+</code></pre><p>Isso criar&#xE1; um arquivo <code>algum_programa</code> que voc&#xEA; pode executar:</p>
+<pre><code>$ ./algum_programa
+</code></pre><p><strong>Observa&#xE7;&#xE3;o:</strong> por padr&#xE3;o os execut&#xE1;veis gerados <strong>n&#xE3;o est&#xE3;o completamente otimizados</strong>. Para ativar as otimiza&#xE7;&#xF5;es, use a flag <code>--release</code>:</p>
+<pre><code>$ crystal build algum_programa.cr --release
+</code></pre><p>Assegure-se de sempre usar <code>--release</code> para gerar execut&#xE1;veis prontos para produ&#xE7;&#xE3;o e para fazer benchmarks.</p>
+<p>O motivo para isso &#xE9; que a performance sem otimiza&#xE7;&#xE3;o ainda assim &#xE9; muito boa e possibilita um tempo r&#xE1;pido de compila&#xE7;&#xE3;o, de modo que voc&#xEA; pode usar o comando <code>crystal</code> quase como se fosse um interpretador.</p>
+<h2 id="criando-um-projeto-ou-biblioteca">Criando um projeto ou biblioteca</h2>
+<p>Use o comando <code>init</code> para criar um projeto Crystal com a estrutura padr&#xE3;o de diret&#xF3;rios.</p>
+<pre><code>$ crystal init lib MinhaBibliotecaLegal
+      create  MinhaBibliotecaLegal/.gitignore
+      create  MinhaBibliotecaLegal/LICENSE
+      create  MinhaBibliotecaLegal/README.md
+      create  MinhaBibliotecaLegal/.travis.yml
+      create  MinhaBibliotecaLegal/Projectfile
+      create  MinhaBibliotecaLegal/src/MinhaBibliotecaLegal.cr
+      create  MinhaBibliotecaLegal/src/MinhaBibliotecaLegal/version.cr
+      create  MinhaBibliotecaLegal/spec/spec_helper.cr
+      create  MinhaBibliotecaLegal/spec/MinhaBibliotecaLegal_spec.cr
+Initialized empty Git repository in ~/MinhaBibliotecaLegal/.git/
+</code></pre><h2 id="outros-comandos-e-op%C3%A7%C3%B5es">Outros comandos e op&#xE7;&#xF5;es</h2>
+<p>Para ver a lista completa de comandos, invoque <code>crystal</code> sem argumentos.</p>
 <pre><code>$ crystal
 Usage: crystal [command] [switches] [program file] [--] [arguments]
 
@@ -2183,7 +2183,7 @@ Command:
     tool                     run a tool
     --help, -h               show this help
     --version, -v            show version
-</code></pre><p>To see the available options for a particular command, use <code>--help</code> after a command:</p>
+</code></pre><p>Para ver todas as op&#xE7;&#xF5;es dispon&#xED;veis para um comando em particular, use a flag <code>--help</code> ap&#xF3;s um comando:</p>
 <pre><code>$ crystal build --help
 Usage: crystal build [options] [programfile] [--] [arguments]
 
@@ -2216,10 +2216,10 @@ Options:
         </div>
 
         
-        <a href="../installation/from_source_repository.html" class="navigation navigation-prev " aria-label="Previous page: From sources"><i class="fa fa-angle-left"></i></a>
+        <a href="../installation/from_source_repository.html" class="navigation navigation-prev " aria-label="Previous page: Do código-fonte"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../overview/index.html" class="navigation navigation-next " aria-label="Next page: Overview and Examples"><i class="fa fa-angle-right"></i></a>
+        <a href="../overview/index.html" class="navigation navigation-next " aria-label="Next page: Visão-Geral e Exemplos"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
