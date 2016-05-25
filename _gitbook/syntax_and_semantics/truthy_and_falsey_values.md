@@ -1,5 +1,5 @@
-# Truthy and falsey values
+# Valores verdadeiros e falsos
 
-A *truthy* value is a value that is considered true for an `if`, `unless`, `while` or `until` guard. A *falsey* value is a value that is considered false in those places.
+Um valor *verdadeiro* (_truthy_) é um valor que é considerado como `true` em uma condição `if`, `unless`, `while` ou `until`. Um valor *falso* (_falsey_) é um valor que é considerado como `false` nestes mesmos lugares.
 
-The only falsey values are `nil`, `false` and null pointers (pointers whose memory address is zero). Any other value is truthy.
+Os únicos valores falsos são `nil`, `false` e ponteiros nulos (ponteiros cujo endereço de memória é zero). Qualquer outro valor é verdadeiro.

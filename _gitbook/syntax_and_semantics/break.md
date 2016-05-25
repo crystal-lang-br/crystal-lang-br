@@ -1,12 +1,12 @@
 # break
 
-You can use `break` to break out of a `while` loop:
+Você pode usar `break` para sair de um loop de um `while`:
 
 ```crystal
 a = 2
 while (a += 1) < 20
   if a == 10
-    # goes to 'puts a'
+    # vai para 'puts a'
     break
   end
 end

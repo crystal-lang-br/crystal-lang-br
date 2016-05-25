@@ -1,6 +1,6 @@
-# As an expression
+# Como uma expressão
 
-The value of an `if` is the value of the last expression found in each of its branches:
+O valor de um `if` é o valor da última expressão encontrada em cada um de seus blocos:
 
 ```crystal
 a = if 2 > 1
@@ -11,27 +11,27 @@ a = if 2 > 1
 a #=> 3
 ```
 
-If an `if` branch is empty, or it’s missing, it’s considered as if it had `nil` in it:
+Se um bloco do `if` estiver vazio ou ausente, considera-se como se houvesse `nil` nele:
 
 ```crystal
 if 1 > 2
   3
 end
 
-# The above is the same as:
+# O código acima é o mesmo que:
 if 1 > 2
   3
 else
   nil
 end
 
-# Another example:
+# Outro exemplo:
 if 1 > 2
 else
   3
 end
 
-# The above is the same as:
+# O código acima é o mesmo que:
 if 1 > 2
   nil
 else

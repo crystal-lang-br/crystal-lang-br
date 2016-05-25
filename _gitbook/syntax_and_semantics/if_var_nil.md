@@ -1,12 +1,12 @@
 # if var.nil?
 
-If an `if`'s condition is `var.nil?` then the type of `var` in the `then` branch is known by the compiler to be `Nil`, and to be known as non-`Nil` in the `else` branch:
+Se a condição de um `if` for `var.nil?`, então para o compilador o tipo de `var` no bloco `then` será tido como `Nil` e no bloco `else` como não-`Nil`:
 
 ```crystal
-a = some_condition ? nil : 3
+a = alguma_condicao ? nil : 3
 if a.nil?
-  # here a is Nil
+  # aqui a é Nil
 else
-  # here a is Int32
+  # aqui a é Int32
 end
 ```

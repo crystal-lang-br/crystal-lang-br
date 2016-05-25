@@ -1,49 +1,49 @@
-# Union types
+# Tipos união
 
-The type of a variable or expression can consist of multiple types. This is called a union type. For example, when assigning to a same variable inside different [if](if.html) branches:
+O tipo de uma variável ou expressão pode consistir de múltiplos tipos. Chamamos isso de tipo união. Por exemplo, quando atribuímos valores a uma mesma variável em partes diferentes de um [if](if.html):
 
 ```crystal
 if 1 + 2 == 3
   a = 1
 else
-  a = "hello"
+  a = "olá"
 end
 
 a # : Int32 | String
 ```
 
-At the end of the if, `a` will have the `Int32 | String` type, read "the union of Int32 and String". This union type is created automatically by the compiler. At runtime, `a` will of course be of one type only. This can be seen by invoking the `class` method:
+No final do if, `a` terá o tipo `Int32 | String`, ou seja, "a união de Int32 e String". Este tipo união é criado automaticamente pelo compilador. Em tempo de execução, `a` só terá um tipo, é claro. Pode-se visualizar isso invocando o método `class`:
 
 ```crystal
-# The runtime type
+# O tipo em tempo de execução
 a.class # => Int32
 ```
 
-The compile-time type can be seen by using [typeof](typeof.html):
+O tipo em tempo de compilação pode ser visto usando [typeof](typeof.html):
 
 ```crystal
-# The compile-time type
+# O tipo em tempo de compilação
 typeof(a) # => Int32 | String
 ```
 
-A union can consist of an arbitrary large number of types. When invoking a method on an expression whose type is a union type, all types in the union must respond to the method, otherwise a compile-time error is given. The type of the method call is the union type of the return types of those methods.
+Uma união pode consistir de um número de tipos grande e arbitrário. Quando invocamos um método em uma expressão cujo tipo seja um tipo união, todos os tipos nessa união precisam responder ao método, doutra forma haverá um erro em tempo de compilação. O tipo da chamada do método é o tipo união de todos os tipos de retorno desses métodos.
 
 ```crystal
-# to_s is defined for Int32 and String, it returns String
+# to_s é definido para Int32 e String, ele retorna String
 a.to_s # => String
 
-a + 1 # Error, because String#+(Int32) isn't defined
+a + 1 # Erro, porque String#+(Int32) não está definido
 ```
 
-## Union types rules
+## Regras para tipos união
 
-In the general case, when two types `T1` and `T2` are combined, the result is a union `T1 | T2`. However, there are a few cases where the resulting type is a different type.
+No caso geral, quando dois tipos `T1` e `T2` são combinados, o resultado é uma união de `T1 | T2`. No entanto, existem alguns casos específicos onde o tipo resultante é diferente.
 
-### Union of classes and structs under the same hierarchy
+### União de classes e structs sob a mesma hierarquia
 
-If `T1` and `T2` are under the same hierarchy, and their nearest common ancestor `Parent` is not `Reference`, `Struct`, `Int`, `Float` nor `Value`, the resulting type is `Parent+`. This is called a virtual type, which basically means the compiler will now see the type as being `Parent` or any of its subtypes.
+Se `T1` e `T2` estão sob a mesma hierarquia, e seu ancestral mais próximo em comum `Parent` não for `Reference`, `Struct`, `Int`, `Float` e nem `Value`, o tipo resultante é `Parent+`. Isso é chamado de um tipo virtual, o que basicamente significa que o compilador verá esse tipo como sendo `Parent` ou qualquer um de seus sub-tipos.
 
-For example:
+Por exemplo:
 
 ```crystal
 class Foo
@@ -58,35 +58,35 @@ end
 bar = Bar.new
 baz = Baz.new
 
-# Here foo's type will be Bar | Baz,
-# but because both Bar and Baz inherit from Foo,
-# the resulting type is Foo+
+# Aqui o tipo de foo será Bar | Baz,
+# mas uma vez que tanto Bar quanto Baz herdam de Foo,
+# o tipo resultante é Foo+
 foo = rand < 0.5 ? bar : baz
 typeof(foo) # => Foo+
 ```
 
-### Union of tuples of the same size
+### União de tuplas de mesmo tamanho
 
-The union of two tuples of the same size results in a tuple type that has the union of the types in each position.
+A união de duas tuplas de mesmo tamanho resultado em um tipo de tupla que possui a união dos tipos em cada posição.
 
-For example:
+Por exemplo:
 
 ```crystal
-t1 = {1, "hi"}   # Tuple(Int32, String)
+t1 = {1, "oi"}   # Tuple(Int32, String)
 t2 = {true, nil} # Tuple(Bool, Nil)
 
 t3 = rand < 0.5 ? t1 : t2
 typeof(t3) # Tuple(Int32 | Bool, String | Nil)
 ```
 
-### Union of named tuples with the same keys
+### União de tuplas nomeadas com as mesmas chaves
 
-The union of two named tuples with the same keys (regardless of their order) results in a named tuple type that has the union of the types in each key. The order of the keys will be the ones from the tuple on the left hand side.
+A união de duas tuplas nomeadas com as mesmas chaves (não importa a ordem) resulta em um tipo de tupla nomeada que possui a união dos tipos em cada chave. A ordem das chaves será a mesma que a das chaves à esquerda.
 
-For example:
+Por exemplo:
 
 ```crystal
-t1 = {x: 1, y: "hi"}   # Tuple(x: Int32, y: String)
+t1 = {x: 1, y: "oi"}   # Tuple(x: Int32, y: String)
 t2 = {y: true, x: nil} # Tuple(y: Bool, x: Nil)
 
 t3 = rand < 0.5 ? t1 : t2

@@ -1,6 +1,6 @@
 # if
 
-An `if` evaluates the `then` branch if its condition is *truthy*, and evaluates the `else` branch, if there’s any, otherwise.
+Um `if` executa o bloco do `then` se a sua condição for *verdadeira*, caso contrário, executa o bloco do `else`, se houver um.
 
 ```crystal
 a = 1
@@ -18,71 +18,71 @@ end
 b #=> 20
 ```
 
-To write a chain of if-else-if you use `elsif`:
+Para escrever uma corrente de if-else-if, você utiliza o `elsif`:
 
 ```crystal
-if some_condition
-  do_something
-elsif some_other_condition
-  do_something_else
+if alguma_condicao
+  faz_alguma_coisa
+elsif alguma_outra_condicao
+  faz_outra_coisa
 else
-  do_that
+  faz_aquilo
 end
 ```
 
-After an `if`, a variable’s type depends on the type of the expressions used in both branches.
+Após um `if`, o tipo de uma variável depende do tipo das expressões usadas em ambos os blocos.
 
 ```crystal
 a = 1
-if some_condition
-  a = "hello"
+if alguma_condicao
+  a = "olá"
 else
   a = true
 end
 # a : String | Bool
 
 b = 1
-if some_condition
+if alguma_condicao
   b = "hello"
 end
 # b : Int32 | String
 
-if some_condition
+if alguma_condicao
   c = 1
 else
-  c = "hello"
+  c = "olá"
 end
 # c : Int32 | String
 
-if some_condition
+if alguma_condicao
   d = 1
 end
 # d : Int32 | Nil
 ```
 
-Note that if a variable is declared inside one of the branches but not in the other one, at the end of the `if` it will also contain the `Nil` type.
+Perceba que se uma variável é declarada dentro de um dos blocos, mas não no outro, no final do `if` ela também conterá o tipo `Nil`.
 
-Inside an `if`'s branch the type of a variable is the one it got assigned in that branch, or the one that it had before the branch if it was not reassigned:
+Dentro do bloco de um `if`, o tipo de uma variável é aquele que foi atribuído naquele bloco, ou aquele que ela tinha antes do bloco se ela não foi reatribuída:
 
 ```crystal
 a = 1
-if some_condition
-  a = "hello"
+if alguma_condicao
+  a = "olá"
   # a : String
   a.size
 end
 # a : String | Int32
 ```
 
-That is, a variable’s type is the type of the last expression(s) assigned to it.
+Ou seja, o tipo de uma variável é o tipo da(s) última(s) expressão(ões) atribuídas a ela.
 
-If one of the branches never reaches past the end of an `if`, like in the case of a `return`, `next`, `break` or `raise`, that type is not considered at the end of the `if`:
+Se um dos blocos nunca chega até depois do final de um `if`, como no caso de um `return`, `next`, `break` ou `raise`, esse tipo não é considerado no final do `if`:
 
 ```crystal
-if some_condition
+if alguma_condicao
   e = 1
 else
-  e = "hello"
+  e = "olá"
   # e : String
   return
 end
