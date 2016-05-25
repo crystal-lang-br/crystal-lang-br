@@ -1,19 +1,19 @@
-# Overview
+# Visão-Geral
 
-You can read this document from top to bottom, but it’s advisable to jump through sections because some concepts are interrelated and can’t be explained in isolation.
+Você pode ler essa documentação do começo até o fim, mas recomenda-se pular de uma seção aa outra porque alguns conceitos estão interrelacionados e não podem ser explicados isoladamente.
 
-In code examples, the comment `#=>` is used to show the value of an expression. For example:
+Nos exemplos de código, o comentário `#=>` é usado para demonstrar o valor de uma expressão. Por exemplo:
 
 ```crystal
 a = 1 + 2
 a #=> 3
 ```
 
-A comment using `:` is used for showing the type of a variable.
+Um comentário usando `:` serve para demonstrar o tipo de uma variável.
 
 ```crystal
 s = "hello"
 # s : String
 ```
 
-Let's start with two examples to familiarize ourselves with the language.
+Vamos começar com dois exemplos para nos familiarizarmos com a linguagem.

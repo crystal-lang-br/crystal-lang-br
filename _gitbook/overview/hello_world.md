@@ -1,10 +1,9 @@
-# Hello World!
+# Olá Mundo!
 
-The classic "hello world" program looks like this in Crystal:
+O programa clássico de "hello world" parece com o seguinte em Crystal:
 
 ```crystal
 puts "Hello world!"
 ```
 
-From this you can see that the main routine is simply the program itself: there's no need to define a "main" function or something similar.
-
+Disso você pode perceber que a rotina principal é simplesmente o próprio programa: não há necessidade de definir uma função "main" ou algo do tipo.

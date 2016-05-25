@@ -1,19 +1,21 @@
 # Symbol
 
-A [Symbol](http://crystal-lang.org/api/Symbol.html) is a constant that is identified by a name without you having to give it a numeric value.
+Um símbolo ([Symbol](http://crystal-lang.org/api/Symbol.html)) é uma constante
+que é identificada por um nome sem que você tenha que atribuir um valor numérico
+a ela.
 
 ```crystal
 :hello
 :good_bye
 
-# With spaces and symbols
-:"symbol with spaces"
+# Símbolos com espaço
+:"símbolo com espaço"
 
-# Ending with question and exclamation marks
-:question?
-:exclamation!
+# Terminando com pontos de interrogação e exclamação
+:interrogação?
+:exclamação!
 
-# For the operators
+# Para os operadores
 :+
 :-
 :*
@@ -42,4 +44,4 @@ A [Symbol](http://crystal-lang.org/api/Symbol.html) is a constant that is identi
 :===
 ```
 
-Internally a symbol is represented as an `Int32`.
+Internamente, um símbolo é representado como um `Int32`.

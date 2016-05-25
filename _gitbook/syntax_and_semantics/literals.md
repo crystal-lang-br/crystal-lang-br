@@ -1,3 +1,3 @@
-# Literals
+# Literais
 
-Several literals are available for creating many basic types in the language.
+Estão disponíveis diversos literais para a criação de vários tipos básicos da linguagem.

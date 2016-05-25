@@ -1,11 +1,11 @@
-# Global variables
+# Variáveis Globais
 
-Global variables start with a dollar sign (`$`). They are declared when you first assign them a value.
+Variáveis globais começam com um sinal de dólar (`$`). Elas são declaradas na primeira vez em que você atribui um valor a elas.
 
 ```crystal
 $year = 2014
 ```
 
-Their type is inferred using the [global type inference algorithm](type_inference.html)
+Seu tipo é inferido usando o [algoritmo global de inferência de tipo](type_inference.md)
 
-Additionally, if your program reads a global variable before it was ever assigned a value it will also have the `Nil` type.
+Além disso, se o seu programa ler uma variável global antes que algum valor seja atribuído a ela, ela também terá o tipo `Nil`.

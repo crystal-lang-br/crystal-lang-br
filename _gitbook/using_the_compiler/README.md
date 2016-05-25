@@ -1,70 +1,70 @@
-# Using the compiler
+# Usando o Compilador
 
-Once you [install](../installation/README.md) the compiler you will have a `crystal` binary at your disposal.
+Depois de [instalar](../installation/README.md) o compilador, você terá um binário `crystal` à sua disposição.
 
-In the next sections a dollar sign (`$`) denotes the command line.
+Nas próximas seções, o sinal de dólar (`$`) denota o terminal.
 
-## Compiling and running at once
+## Compilando e rodando ao mesmo tempo
 
-To compile and run a program in a single shot you can invoke `crystal` with a single filename:
-
-```
-$ crystal some_program.cr
-```
-
-Crystal files end with the `.cr` extension.
-
-Alternative you can use the `run` command:
+Para compilar e imediatamente rodar um programa, você pode invocar `crystal` com um único nome de arquivo:
 
 ```
-$ crystal run some_program.cr
+$ crystal algum_programa.cr
 ```
 
-## Creating an executable
+Os arquivos do Crystal terminam com a extensão `.cr`.
 
-To create an executable use the `build` command:
-
-```
-$ crystal build some_program.cr
-```
-
-This will create a `some_program` file that you can execute:
+Alternativamente, você pode usar o comando `run`:
 
 ```
-$ ./some_program
+$ crystal run algum_programa.cr
 ```
 
-**Note:** By default the generated executables **are not fully optimized**. To turn optimizations on, use the `--release` flag:
+## Criando um executável
+
+Para criar um executável, use o comando `build`:
 
 ```
-$ crystal build some_program.cr --release
+$ crystal build algum_programa.cr
 ```
 
-Make sure to always use `--release` for production-ready executables and when performing benchmarks.
-
-The reason for this is that performance without full optimizations is still pretty good and provides fast compile times, so you can use the `crystal` command almost as if it were an interpreter.
-
-## Creating a project or library
-
-Use the `init` command to create a Crystal project with the standard directory structure.
+Isso criará um arquivo `algum_programa` que você pode executar:
 
 ```
-$ crystal init lib MyCoolLib
-      create  MyCoolLib/.gitignore
-      create  MyCoolLib/LICENSE
-      create  MyCoolLib/README.md
-      create  MyCoolLib/.travis.yml
-      create  MyCoolLib/shard.yml
-      create  MyCoolLib/src/MyCoolLib.cr
-      create  MyCoolLib/src/MyCoolLib/version.cr
-      create  MyCoolLib/spec/spec_helper.cr
-      create  MyCoolLib/spec/MyCoolLib_spec.cr
-Initialized empty Git repository in ~/MyCoolLib/.git/
+$ ./algum_programa
 ```
 
-## Other commands and options
+**Observação:** por padrão os executáveis gerados **não estão completamente otimizados**. Para ativar as otimizações, use a flag `--release`:
 
-To see the full set of commands, invoke `crystal` without arguments.
+```
+$ crystal build algum_programa.cr --release
+```
+
+Assegure-se de sempre usar `--release` para gerar executáveis prontos para produção e para fazer benchmarks.
+
+O motivo para isso é que a performance sem otimização ainda assim é muito boa e possibilita um tempo rápido de compilação, de modo que você pode usar o comando `crystal` quase como se fosse um interpretador.
+
+## Criando um projeto ou biblioteca
+
+Use o comando `init` para criar um projeto Crystal com a estrutura padrão de diretórios.
+
+```
+$ crystal init lib MinhaBibliotecaLegal
+      create  MinhaBibliotecaLegal/.gitignore
+      create  MinhaBibliotecaLegal/LICENSE
+      create  MinhaBibliotecaLegal/README.md
+      create  MinhaBibliotecaLegal/.travis.yml
+      create  MinhaBibliotecaLegal/Projectfile
+      create  MinhaBibliotecaLegal/src/MinhaBibliotecaLegal.cr
+      create  MinhaBibliotecaLegal/src/MinhaBibliotecaLegal/version.cr
+      create  MinhaBibliotecaLegal/spec/spec_helper.cr
+      create  MinhaBibliotecaLegal/spec/MinhaBibliotecaLegal_spec.cr
+Initialized empty Git repository in ~/MinhaBibliotecaLegal/.git/
+```
+
+## Outros comandos e opções
+
+Para ver a lista completa de comandos, invoque `crystal` sem argumentos.
 
 ```
 $ crystal
@@ -83,7 +83,7 @@ Command:
     --version, -v            show version
 ```
 
-To see the available options for a particular command, use `--help` after a command:
+Para ver todas as opções disponíveis para um comando em particular, use a flag `--help` após um comando:
 
 ```
 $ crystal build --help
