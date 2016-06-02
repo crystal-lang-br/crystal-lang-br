@@ -1,6 +1,6 @@
-name: The Crystal Programming Language
-description: A compiled language with Ruby like syntax and type inference
-url: http://crystal-lang.org
+name: A Linguagem de Programação Crystal
+description: Uma linguagem compilada com sintaxe parecida com Ruby e inferência de tipos
+url: http://br.crystal-lang.org
 logo: /images/crystal-h.png
 defaults:
   -
